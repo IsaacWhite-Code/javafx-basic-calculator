@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.basiccalculator.PrimaryController"
+            prefWidth="400" prefHeight="500">
+
+    <top>
+        <TextField fx:id="display"
+                   text="0"
+                   editable="false"
+                   alignment="CENTER_RIGHT"
+                   maxWidth="Infinity"
+                   prefHeight="100"
+                   style="-fx-font-size: 30px;" />
+    </top>
+
+    <center>
+        <GridPane hgap="5" vgap="5"
+                  maxWidth="Infinity"
+                  maxHeight="Infinity">
+
+            <columnConstraints>
+                <ColumnConstraints percentWidth="25" hgrow="ALWAYS" />
+                <ColumnConstraints percentWidth="25" hgrow="ALWAYS" />
+                <ColumnConstraints percentWidth="25" hgrow="ALWAYS" />
+                <ColumnConstraints percentWidth="25" hgrow="ALWAYS" />
+            </columnConstraints>
+
+            <rowConstraints>
+                <RowConstraints percentHeight="25" vgrow="ALWAYS" />
+                <RowConstraints percentHeight="25" vgrow="ALWAYS" />
+                <RowConstraints percentHeight="25" vgrow="ALWAYS" />
+                <RowConstraints percentHeight="25" vgrow="ALWAYS" />
+            </rowConstraints>
+
+            <!-- Row 1 -->
+            <Button text="1" onAction="#handleButtonClick"
+                    maxWidth="Infinity" maxHeight="Infinity"
+                    GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <Button text="2" onAction="#handleButtonClick"
+                    maxWidth="Infinity" maxHeight="Infinity"
+                    GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <Button text="3" onAction="#handleButtonClick"
+                    maxWidth="Infinity" maxHeight="Infinity"
+                    GridPane.columnIndex="2" GridPane.rowIndex="0" />
+            <Button text="/" onAction="#handleButtonClick"
+                    maxWidth="Infinity" maxHeight="Infinity"
+                    GridPane.columnIndex="3" GridPane.rowIndex="0" />
+
+            <!-- Row 2 -->
+            <Button text="4" onAction="#handleButtonClick"
+                    maxWidth="Infinity" maxHeight="Infinity"
+                    GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <Button text="5" onAction="#handleButtonClick"
+                    maxWidth="Infinity" maxHeight="Infinity"
+                    GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button text="6" onAction="#handleButtonClick"
+                    maxWidth="Infinity" maxHeight="Infinity"
+                    GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button text="*" onAction="#handleButtonClick"
+                    maxWidth="Infinity" maxHeight="Infinity"
+                    GridPane.columnIndex="3" GridPane.rowIndex="1" />
+
+            <!-- Row 3 -->
+            <Button text="7" onAction="#handleButtonClick"
+                    maxWidth="Infinity" maxHeight="Infinity"
+                    GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <Button text="8" onAction="#handleButtonClick"
+                    maxWidth="Infinity" maxHeight="Infinity"
+                    GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button text="9" onAction="#handleButtonClick"
+                    maxWidth="Infinity" maxHeight="Infinity"
+                    GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button text="-" onAction="#handleButtonClick"
+                    maxWidth="Infinity" maxHeight="Infinity"
+                    GridPane.columnIndex="3" GridPane.rowIndex="2" />
+
+            <!-- Row 4 -->
+            <Button text="C" onAction="#handleButtonClick"
+                    maxWidth="Infinity" maxHeight="Infinity"
+                    GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <Button text="0" onAction="#handleButtonClick"
+                    maxWidth="Infinity" maxHeight="Infinity"
+                    GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button text="=" onAction="#handleButtonClick"
+                    maxWidth="Infinity" maxHeight="Infinity"
+                    GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Button text="+" onAction="#handleButtonClick"
+                    maxWidth="Infinity" maxHeight="Infinity"
+                    GridPane.columnIndex="3" GridPane.rowIndex="3" />
+
+        </GridPane>
+    </center>
+
+</BorderPane>
